@@ -1,0 +1,8 @@
+Oct 31 23:59:58 edgehost sshd[101]: pre-dst-end saturday entry
+Nov  1 00:30:00 edgehost sshd[102]: last daylight hour entry
+Nov  1 03:30:00 edgehost sshd[103]: first standard hours entry
+Dec 31 23:59:59 edgehost cron[104]: year ends here
+Jan  1 00:00:01 edgehost cron[105]: year begins here
+Mar  7 12:00:00 edgehost sshd[106]: standard time before spring
+Mar  8 01:59:59 edgehost sshd[107]: last second of standard time
+Mar  8 03:00:01 edgehost sshd[108]: first second of daylight time

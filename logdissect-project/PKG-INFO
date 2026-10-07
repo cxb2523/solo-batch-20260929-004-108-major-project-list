@@ -1,0 +1,109 @@
+Metadata-Version: 1.1
+Name: logdissect
+Version: 3.1.1
+Summary: Robust CLI syslog forensics tool
+Home-page: https://github.com/dogoncouch/logdissect
+Author: Dan Persons
+Author-email: dpersonsdev@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/dogoncouch/logdissect/archive/v3.1.1.tar.gz
+Description-Content-Type: UNKNOWN
+Description: 
+        Logdissect
+        ----------
+        
+        Logdissect is a CLI utility and Python library for analyzing log files and other data. It can parse, merge, filter, and export data (to log files, or JSON).
+        
+        Options
+        ```````
+        
+        ::
+        
+            usage: logdissect.py [-h] [--dhost DHOST] [--grep PATTERN] [--last LAST]
+                                 [--process PROCESS] [--protocol PROTOCOL] [--range RANGE]
+                                 [--utc] [--rdhost DHOST] [--rgrep PATTERN]
+                                 [--rprocess PROCESS] [--rprotocol PROTOCOL]
+                                 [--rshost SHOST] [--rsource SOURCE] [--shost SHOST]
+                                 [--source SOURCE] [--linejson LINEJSON] [--outlog OUTLOG]
+                                 [--label LABEL] [--sojson SOJSON] [--pretty] [--version]
+                                 [--verbose] [-s] [--list-parsers] [-p PARSER] [-z]
+                                 [-t TZONE]
+                                 [file [file ...]]
+            
+            positional arguments:
+              file                  specify input files
+            
+            optional arguments:
+              -h, --help            show this help message and exit
+              --version             show program's version number and exit
+              --verbose             set verbose terminal output
+              -s                    silence terminal output
+              --list-parsers        return a list of available parsers
+              -p PARSER             select a parser (default: syslog)
+              -z, --unzip           include files compressed with gzip
+              -t TZONE              specify timezone offset to UTC (e.g. '+0500')
+            
+            filter options:
+              --dhost DHOST         match a destination host
+              --grep PATTERN        match a pattern
+              --last LAST           match a preceeding time period (e.g. 5m/3h/2d/etc)
+              --process PROCESS     match a source process
+              --protocol PROTOCOL   match a protocol
+              --range RANGE         match a time range (YYYYMMDDhhmm-YYYYMMDDhhmm)
+              --utc                 use UTC for range matching
+              --rdhost DHOST        filter out a destination host
+              --rgrep PATTERN       filter out a pattern
+              --rprocess PROCESS    filter out a source process
+              --rprotocol PROTOCOL  filter out a protocol
+              --rshost SHOST        filter out a source host
+              --rsource SOURCE      filter out a log source
+              --shost SHOST         match a source host
+              --source SOURCE       match a log source
+            
+            output options:
+              --linejson LINEJSON   set the output file for line by line JSON output
+              --outlog OUTLOG       set the output file for standard log output
+              --label LABEL         set label type for OUTLOG (fname|fpath)
+              --sojson SOJSON       set the output file for single object JSON output
+              --pretty              use pretty formatting for sojson output
+        
+        
+            ==== Available parsing modules: ====
+            
+            ciscoios        : cisco ios parsing module
+            emerge          : gentoo emerge log parsing module
+            linejson        : logdissect object-per-line JSON parsing module
+            sojson          : logdissect single object JSON parsing module
+            syslog          : syslog (standard timestamp) parsing module
+            syslogiso       : syslog (ISO timestamp) parsing module
+            syslognohost    : syslog (standard timestamp, no host) parsing module
+            tcpdump         : tcpdump terminal output parsing module
+            webaccess       : web access log parsing module
+            windowsrsyslog  : windows rsyslog agent log parsing module
+        
+        Links
+        `````
+        
+        * `Releases <https://github.com/dogoncouch/logdissect/releases/>`_
+        * `Usage <https://github.com/dogoncouch/logdissect/blob/master/README.md>`_
+        * `API Usage <https://github.com/dogoncouch/logdissect/blob/master/docs/README-API.md>`_
+        * `How To Contribute <https://github.com/dogoncouch/logdissect/blob/master/docs/CONTRIBUTING.md>`_
+        * `Changelog <https://github.com/dogoncouch/logdissect/blob/master/CHANGELOG.md>`_
+        * `GitHub <https://github.com/dogoncouch/logdissect/>`_
+        * `Development source <https://github.com/dogoncouch/logdissect/tree/dev>`_
+        
+        
+Keywords: log,syslog,analysis,forensics,security,cli,secops,data-science,forensic-analysis,log-analysis,log-analyzer,log-viewer,log-parser,log-viewer,log-parsing,python-library,python-module,parser,data-analysis,library,module
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Logging
